@@ -3,7 +3,8 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Router } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import localept from '@angular/common/locales/pt';
 registerLocaleData(localept, 'pt');
 
@@ -42,7 +43,8 @@ import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule,
+    // FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES),
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'pt' } ],
